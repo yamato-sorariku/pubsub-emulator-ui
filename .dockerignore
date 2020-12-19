@@ -1,0 +1,6 @@
+.github
+
+front/node_modules
+front/.nuxt
+
+gcp-pubsub-ui

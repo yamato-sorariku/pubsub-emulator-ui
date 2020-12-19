@@ -1,0 +1,19 @@
+version: "3"
+services:
+  ui:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8888:80
+    environment:
+      - PUBSUB_EMULATOR_HOST=pubsub:8085
+      - PUBSUB_PROJECT_ID=my-project-id
+      - PUBSUB_TOPIC_ID=my-topic
+      - PUBSUB_SUBSCRIPTION_ID=my-topic-subscription
+    depends_on:
+      - pubsub
+  pubsub:
+    build: ./docker/pubsub-emulator/
+    ports:
+      - 8085:8085
