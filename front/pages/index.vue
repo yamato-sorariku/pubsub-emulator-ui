@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import {ICloseEvent, w3cwebsocket} from 'websocket'
+import { ICloseEvent, w3cwebsocket } from 'websocket'
 import PubSubMessage from '~/components/PubSubMessage.vue'
 const W3CWebSocket = w3cwebsocket
 
@@ -46,10 +46,10 @@ export default class Dashboard extends Vue {
       }
     }
     socket.onopen = () => {
-      console.log("Socket opened");
-    };
+      console.log('Socket opened')
+    }
     socket.onclose = (e: ICloseEvent) => {
-      console.log("Socket closed [" + e.code + "]");
+      console.log('Socket closed [' + e.code + ']')
     }
   }
 }

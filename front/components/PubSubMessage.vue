@@ -11,7 +11,7 @@
           <button @click="copyToClipboard">COPY</button>
           <dt class="text-sm font-medium text-gray-500">Data</dt>
           <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-10">
-            <span v-html="data" />
+            {{ data }}
           </dd>
         </div>
       </dl>
